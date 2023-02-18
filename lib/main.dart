@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant/screens/login_screen.dart';
 import 'package:plant/screens/on_boarding_screen.dart';
 import 'package:plant/screens/splash_screen.dart';
 import 'package:plant/screens/welcome_screen.dart';
@@ -17,8 +18,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primaryColor: Color(0xff3A7F0D)),
       debugShowCheckedModeBanner: false,
+        routes: {
+          LoginScreen.id: (context) => LoginScreen(),
+        },
       home: Scaffold(
-        body:WelcomeScreen(),
+        body:SplashScreen(),
     ));
   }
 }

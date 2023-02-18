@@ -32,7 +32,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Get to Know the plants around you and add you favorite \n plants to your my plant section ",
+                        "Get to Know the plants around you and add you favorite plants to your my plant section ",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 14,
@@ -42,7 +42,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ],
                   ),
                   image: Container(
-                    padding: EdgeInsets.only(top: 8.0),
+                    padding: EdgeInsets.all( 20.0),
                     width: double.infinity,
                     child: Image.asset(
                       'assets/images/Group 221.png',
@@ -67,7 +67,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       Padding(
                         padding: EdgeInsets.all(10.0),
                         child: Text(
-                          " Get all the information you need to take good care of \n your plant",
+                          " Get all the information you need to take good care of your plant",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 14,
@@ -78,7 +78,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ],
                   ),
                   image: Container(
-                    padding: EdgeInsets.only(top: 10.0),
+                    padding: EdgeInsets.all( 20.0),
                     width: double.infinity,
                     child: Image.asset(
                       'assets/images/Group 221.png',
@@ -103,7 +103,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
-                          " Add a reminder for you plants to send you a reminder\n when to take care of yours plants ",
+                          " Add a reminder for you plants to send you a reminder when to take care of yours plants ",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 14,
@@ -114,7 +114,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ],
                   ),
                   image: Container(
-                    padding: EdgeInsets.only(top: 10.0),
+                    padding: EdgeInsets.all( 20.0),
                     width: double.infinity,
                     child: Image.asset(
                       'assets/images/Group 221.png',

@@ -43,15 +43,21 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           Positioned(
-              child: Container(
-              //  padding: EdgeInsets.only (bottom:30),
-                alignment: Alignment.bottomCenter,
-                width: double.infinity,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Container(
+                  //  padding: EdgeInsets.only (bottom:30),
+                    alignment: Alignment.bottomCenter,
+                    width: double.infinity,
             child: Image.asset(
-              "assets/images/Plant care.png",
-              fit: BoxFit.fitWidth,
+                  "assets/images/Plant care.png",
+                  fit: BoxFit.fitWidth,
             ),
-          ))
+          ),SizedBox(height: 50,)
+                ],
+              ),),
         ],
       ),
     ));

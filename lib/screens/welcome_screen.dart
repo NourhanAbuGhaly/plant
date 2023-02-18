@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant/screens/login_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -40,8 +41,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   borderRadius: BorderRadius.circular(5.0),
                   child: MaterialButton(
                     onPressed: () {
+                      print("ngjfkbgf");
+                      () => Navigator.pushReplacementNamed(
+                            context,
+                           LoginScreen.id
+                          );
+
                       //Go to login screen.
-                    },
+    },
                     minWidth: 200.0,
                     height: 60.0,
                     child: Text(
@@ -73,7 +80,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height/6,)
+              SizedBox(
+                height: MediaQuery.of(context).size.height / 6,
+              )
             ],
           ),
           Positioned(
