@@ -42,7 +42,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   child: MaterialButton(
                     onPressed: () {
                       print("ngjfkbgf");
-                      () => Navigator.pushReplacementNamed(
+                       Navigator.pushNamed(
                             context,
                            LoginScreen.id
                           );
