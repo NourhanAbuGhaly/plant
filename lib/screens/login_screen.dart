@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant/screens/forget_password_screen.dart';
 import 'package:plant/screens/home_screen.dart';
 import 'package:plant/screens/register_screen.dart';
 import 'package:plant/screens/splash_screen.dart';
@@ -94,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, SplashScreen.id);
+                        Navigator.pushNamed(context, ForgetScreen.id);
                       },
                       child: Text(
                         "Forget  Password",
