@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:plant/screens/on_boarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
+  static const String id = "SplashScreen";
   const SplashScreen({Key? key}) : super(key: key);
 
   @override

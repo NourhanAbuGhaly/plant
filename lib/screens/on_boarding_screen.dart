@@ -42,7 +42,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ],
                   ),
                   image: Container(
-                    padding: EdgeInsets.all( 20.0),
+                    padding: EdgeInsets.all(20.0),
                     width: double.infinity,
                     child: Image.asset(
                       'assets/images/Group 221.png',
@@ -78,7 +78,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ],
                   ),
                   image: Container(
-                    padding: EdgeInsets.all( 20.0),
+                    padding: EdgeInsets.all(20.0),
                     width: double.infinity,
                     child: Image.asset(
                       'assets/images/Group 221.png',
@@ -114,7 +114,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ],
                   ),
                   image: Container(
-                    padding: EdgeInsets.all( 20.0),
+                    padding: EdgeInsets.all(20.0),
                     width: double.infinity,
                     child: Image.asset(
                       'assets/images/Group 221.png',
@@ -142,8 +142,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               done: const Text("Done",
                   style: TextStyle(
                       fontWeight: FontWeight.w700, color: Color(0xff3A7F0D))),
-              onDone: () => Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => WelcomeScreen())),
+              onDone: () => Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => WelcomeScreen(),
+                ),
+              ),
 
               // On Done button pressed
 

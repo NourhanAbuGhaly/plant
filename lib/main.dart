@@ -20,9 +20,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
         routes: {
           LoginScreen.id: (context) => LoginScreen(),
+          SplashScreen.id:(context)=>SplashScreen()
         },
       home: Scaffold(
-        body:SplashScreen(),
+        body:LoginScreen(),
     ));
   }
 }
