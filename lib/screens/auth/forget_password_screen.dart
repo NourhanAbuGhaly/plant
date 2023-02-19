@@ -64,9 +64,8 @@ class _ForgetScreenState extends State<ForgetScreen> {
                         borderRadius: BorderRadius.circular(5.0),
                         child: MaterialButton(
                           onPressed: () {
-
-Navigator.pushNamed(context, CoodScreen.id);
-                            //Go to login screen.
+                            Navigator.pushNamed(context, CoodScreen.id);
+                      //Go to login screen.
                           },
                           minWidth: 200.0,
                           height: 60.0,
