@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant/screens/home_screen.dart';
-import 'package:plant/screens/login_screen.dart';
+import 'package:plant/screens/auth/login_screen.dart';
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
 static const String id= "RegisterScreen";

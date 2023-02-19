@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:plant/screens/auth/login_screen.dart';
-import 'package:plant/screens/auth/register_screen.dart';
 
-class WelcomeScreen extends StatefulWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  static const String id = "LoginScreen";
+
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<WelcomeScreen> createState() => _WelcomeScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -38,6 +38,44 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
                 child: Material(
                   elevation: 5.0,
+                  borderRadius: BorderRadius.circular(5.0),
+                  child: TextField(
+                    onChanged: (val) {},
+                    decoration: const InputDecoration(
+                        filled: true,
+                        fillColor: Color.fromARGB(08, 158, 158, 158),
+                        hintText: "Email",
+                        hintStyle: TextStyle(
+                            color: Color(0xff9E9E9E),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w400),
+                        border: OutlineInputBorder()),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
+                child: Material(
+                  elevation: 5.0,
+                  borderRadius: BorderRadius.circular(5.0),
+                  child: TextField(
+                    onChanged: (val) {},
+                    decoration: const InputDecoration(
+                        filled: true,
+                        fillColor: Color.fromARGB(08, 158, 158, 158),
+                        hintText: "Password",
+                        hintStyle: TextStyle(
+                            color: Color(0xff9E9E9E),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w400),
+                        border: OutlineInputBorder()),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
+                child: Material(
+                  elevation: 5.0,
                   color: Color(0xff49A010),
                   borderRadius: BorderRadius.circular(5.0),
                   child: MaterialButton(
@@ -52,28 +90,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       'LOG IN',
                       style: TextStyle(
                         color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
-                child: Material(
-                  elevation: 5.0,
-                  borderRadius: BorderRadius.circular(5.0),
-                  child: MaterialButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, RegisterScreen.id);
-
-                      //Go to login screen.
-                    },
-                    minWidth: 200.0,
-                    height: 60.0,
-                    child: Text(
-                      'SIGN IN',
-                      style: TextStyle(
-                        color: Color(0xff3A7F0D),
                       ),
                     ),
                   ),
