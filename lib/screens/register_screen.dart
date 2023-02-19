@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:plant/screens/home_screen.dart';
+import 'package:plant/screens/login_screen.dart';
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
 static const String id= "RegisterScreen";
@@ -113,6 +115,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             borderRadius: BorderRadius.circular(5.0),
                             child: MaterialButton(
                               onPressed: () {
+                                Navigator
+                                .pushNamed(context,HomeScreen.id);
                                 //Go to login screen.
                               },
                               minWidth: 200.0,
@@ -142,7 +146,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ),
                             ),
                             GestureDetector(
-                              onTap: (){},
+                              onTap: (){Navigator.pushNamed(context, LoginScreen.id);},
                               child: Text(
                                 " LOGIN",
                                 style: TextStyle(
