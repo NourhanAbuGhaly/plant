@@ -37,7 +37,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
                 child: Material(
                   elevation: 5.0,
-                  color: Color(0xff3A7F0D),
+                  color: Color(0xff49A010),
                   borderRadius: BorderRadius.circular(5.0),
                   child: MaterialButton(
                     onPressed: () {
