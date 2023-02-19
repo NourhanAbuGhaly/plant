@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:plant/screens/cood_screen.dart';
+import 'package:plant/screens/forget_password_screen.dart';
+import 'package:plant/screens/home_screen.dart';
 import 'package:plant/screens/login_screen.dart';
 import 'package:plant/screens/on_boarding_screen.dart';
+import 'package:plant/screens/register_screen.dart';
 import 'package:plant/screens/splash_screen.dart';
 import 'package:plant/screens/welcome_screen.dart';
 
@@ -20,7 +24,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
         routes: {
           LoginScreen.id: (context) => LoginScreen(),
-          SplashScreen.id:(context)=>SplashScreen()
+          SplashScreen.id:(context)=>SplashScreen(),
+          RegisterScreen.id:(context)=>RegisterScreen(),
+          CoodScreen.id:(context)=>CoodScreen(),
+          ForgetScreen.id:(context)=>ForgetScreen(),
+          HomeScreen.id:(context)=>HomeScreen()
+
         },
       home: Scaffold(
         body:SplashScreen(),
