@@ -32,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Container(
-            alignment: Alignment.center,
+            alignment: Alignment.bottomRight,
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -47,15 +47,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
+                    padding:
+                        EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
                     child: Material(
                       elevation: 5.0,
                       borderRadius: BorderRadius.circular(5.0),
                       child: TextField(
                         onChanged: (val) {},
                         decoration: const InputDecoration(
-                            filled:true,
-                            fillColor: Color.fromARGB(08,158,158,158),
+                            filled: true,
+                            fillColor: Color.fromARGB(08, 158, 158, 158),
                             hintText: "Email",
                             hintStyle: TextStyle(
                                 color: Color(0xff9E9E9E),
@@ -66,15 +67,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
+                    padding:
+                        EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
                     child: Material(
                       elevation: 5.0,
                       borderRadius: BorderRadius.circular(5.0),
                       child: TextField(
                         onChanged: (val) {},
                         decoration: const InputDecoration(
-                            filled:true,
-                            fillColor: Color.fromARGB(08,158,158,158),
+                            filled: true,
+                            fillColor: Color.fromARGB(08, 158, 158, 158),
                             hintText: "Password",
                             hintStyle: TextStyle(
                                 color: Color(0xff9E9E9E),
@@ -86,9 +88,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Container(
                     alignment: Alignment.centerRight,
-                    padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
+                    padding:
+                        EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
                     child: GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Navigator.pushNamed(context, SplashScreen.id);
                       },
                       child: Text(
@@ -99,8 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
+                  Container(
                     child: Material(
                       elevation: 5.0,
                       color: Color(0xff49A010),
@@ -122,12 +124,39 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
-
+                  SizedBox(
+                    height: 100,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Are you not account? ",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white,
+                          fontSize: 14,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: (){},
+                        child: Text(
+                          "SIGN UP",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xff3A7F0D)),
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 60,
+                  ),
                 ],
               ),
             ),
           ),
-
         ],
       ),
     ));

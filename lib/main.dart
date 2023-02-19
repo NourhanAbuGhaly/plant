@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           SplashScreen.id:(context)=>SplashScreen()
         },
       home: Scaffold(
-        body:LoginScreen(),
+        body:SplashScreen(),
     ));
   }
 }
