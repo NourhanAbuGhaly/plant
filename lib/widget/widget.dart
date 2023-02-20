@@ -16,7 +16,7 @@ class MyButtonText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+      padding:const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
       child: Material(
         elevation: 5.0,
         borderRadius: BorderRadius.circular(5.0),
