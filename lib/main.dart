@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant/constants/constant.dart';
 import 'package:plant/screens/auth/forget_password_screen.dart';
 import 'package:plant/screens/auth/login_screen.dart';
 import 'package:plant/screens/auth/register_screen.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Color(0xff3A7F0D)),
+      theme: ThemeData(primaryColor: kMainColor),
       debugShowCheckedModeBanner: false,
         routes: {
           LoginScreen.id: (context) => LoginScreen(),
