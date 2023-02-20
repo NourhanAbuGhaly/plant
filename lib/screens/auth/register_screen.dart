@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:plant/constants/constant.dart';
 import 'package:plant/screens/home_screen.dart';
 import 'package:plant/screens/auth/login_screen.dart';
+import 'package:plant/widget/widget.dart';
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
 static const String id= "RegisterScreen";
@@ -34,7 +36,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   alignment: Alignment.bottomRight,
                   child: SingleChildScrollView(
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Container(
@@ -46,90 +48,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           ),
                         ),
                         SizedBox(height: 10,),
-                        Padding(
-                          padding:
-                          EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
-                          child: Material(
-                            elevation: 5.0,
-                            borderRadius: BorderRadius.circular(5.0),
-                            child: TextField(
-                              onChanged: (val) {},
-                              decoration: const InputDecoration(
-                                  filled: true,
-                                  fillColor: Color.fromARGB(08, 158, 158, 158),
-                                  hintText: "Name",
-                                  hintStyle: TextStyle(
-                                      color: Color(0xff9E9E9E),
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400),
-                                  border: OutlineInputBorder()),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                          EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
-                          child: Material(
-                            elevation: 5.0,
-                            borderRadius: BorderRadius.circular(5.0),
-                            child: TextField(
-                              onChanged: (val) {},
-                              decoration: const InputDecoration(
-                                  filled: true,
-                                  fillColor: Color.fromARGB(08, 158, 158, 158),
-                                  hintText: "Email",
-                                  hintStyle: TextStyle(
-                                      color: Color(0xff9E9E9E),
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400),
-                                  border: OutlineInputBorder()),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                          EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
-                          child: Material(
-                            elevation: 5.0,
-                            borderRadius: BorderRadius.circular(5.0),
-                            child: TextField(
-                              onChanged: (val) {},
-                              decoration: const InputDecoration(
-                                  filled: true,
-                                  fillColor: Color.fromARGB(08, 158, 158, 158),
-                                  hintText: "Password",
-                                  hintStyle: TextStyle(
-                                      color: Color(0xff9E9E9E),
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400),
-                                  border: OutlineInputBorder()),
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 15,),
+                        MyTextFieldWidget(title: "Name", MyOnChange: (val ){}),
+                        MyTextFieldWidget(title: "Email", MyOnChange: (val ){}),
+                        MyTextFieldWidget(title: "PassWord", MyOnChange: (val ){}),
 
-                        Container(
-                          child: Material(
-                            elevation: 5.0,
-                            color: Color(0xff49A010),
-                            borderRadius: BorderRadius.circular(5.0),
-                            child: MaterialButton(
-                              onPressed: () {
-                                Navigator
-                                .pushNamed(context,HomeScreen.id);
-                                //Go to login screen.
-                              },
-                              minWidth: 200.0,
-                              height: 60.0,
-                              child: Text(
-                                "sign up",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        SizedBox(height: 15,),
+MyButtonText1(title:    "sign up", color: kBoxColor, widget: HomeScreen.id),
+
                         SizedBox(
                           height: 80,
                         ),
@@ -138,22 +63,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              "Already have account ",
+                              "Already have account? ",
                               style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 color: Colors.white,
                                 fontSize: 14,
                               ),
                             ),
-                            GestureDetector(
-                              onTap: (){Navigator.pushNamed(context, LoginScreen.id);},
-                              child: Text(
-                                " LOGIN",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Color(0xff3A7F0D)),
-                              ),
-                            )
+                            MyGestureDetector(title:"LOGIN", widget: LoginScreen.id, color: kMainColor),
+
                           ],
                         ),
                         SizedBox(
