@@ -16,7 +16,7 @@ class MyButtonText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
+      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
       child: Material(
         elevation: 5.0,
         borderRadius: BorderRadius.circular(5.0),
@@ -55,7 +55,7 @@ class MyButtonText1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
+      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
       child: Material(
         elevation: 5.0,
         color: Color(0xff49A010),
@@ -90,7 +90,7 @@ class MyTextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
+      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
       child: Material(
         elevation: 5.0,
         borderRadius: BorderRadius.circular(5.0),
@@ -110,3 +110,23 @@ class MyTextFieldWidget extends StatelessWidget {
     );
   }
 }
+
+class MyGestureDetector extends StatelessWidget {
+  const MyGestureDetector({Key? key, required this.title, required this.widget, required this.color}) : super(key: key);
+final String title;
+final String widget;
+final Color color;
+  @override
+  Widget build(BuildContext context) {
+    return  GestureDetector(
+      onTap: (){Navigator.pushNamed(context, widget);},
+      child: Text(
+        title,
+        style: TextStyle(
+            fontWeight: FontWeight.w500,
+            color: color,fontSize: 14),
+      ),
+    );
+  }
+}
+

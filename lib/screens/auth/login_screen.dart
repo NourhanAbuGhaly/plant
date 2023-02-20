@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:plant/constants/constant.dart';
+import 'package:plant/screens/auth/forget_password_screen.dart';
+import 'package:plant/screens/auth/register_screen.dart';
+import 'package:plant/screens/home_screen.dart';
+import 'package:plant/widget/widget.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = "LoginScreen";
@@ -30,83 +35,60 @@ class _LoginScreenState extends State<LoginScreen> {
               fit: BoxFit.fitWidth,
             ),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Container(
-                alignment: Alignment.center,
-                width: double.infinity,
-                child: Image.asset(
-                  "assets/images/Plant care.png",
-                  fit: BoxFit.fitWidth,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
-                child: Material(
-                  elevation: 5.0,
-                  borderRadius: BorderRadius.circular(5.0),
-                  child: TextField(
-                    onChanged: (val) {},
-                    decoration: const InputDecoration(
-                        filled: true,
-                        fillColor: Color.fromARGB(08, 158, 158, 158),
-                        hintText: "Email",
-                        hintStyle: TextStyle(
-                            color: Color(0xff9E9E9E),
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400),
-                        border: OutlineInputBorder()),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
-                child: Material(
-                  elevation: 5.0,
-                  borderRadius: BorderRadius.circular(5.0),
-                  child: TextField(
-                    onChanged: (val) {},
-                    decoration: const InputDecoration(
-                        filled: true,
-                        fillColor: Color.fromARGB(08, 158, 158, 158),
-                        hintText: "Password",
-                        hintStyle: TextStyle(
-                            color: Color(0xff9E9E9E),
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400),
-                        border: OutlineInputBorder()),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
-                child: Material(
-                  elevation: 5.0,
-                  color: Color(0xff49A010),
-                  borderRadius: BorderRadius.circular(5.0),
-                  child: MaterialButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, LoginScreen.id);
-
-                      //Go to login screen.
-                    },
-                    minWidth: 200.0,
-                    height: 60.0,
-                    child: Text(
-                      'LOG IN',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
+          Container(
+            alignment: Alignment.bottomCenter,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: double.infinity,
+                    child: Image.asset(
+                      "assets/images/Plant care.png",
+                      fit: BoxFit.fitWidth,
                     ),
                   ),
-                ),
+                  MyTextFieldWidget(title: "Email", MyOnChange: (val) {}),
+                  MyTextFieldWidget(title: "Password", MyOnChange: (val) {}),
+                  Container(
+                    padding: EdgeInsets.only(right: 12.0),
+                    alignment: Alignment.bottomRight,
+                    child: MyGestureDetector(
+                        title: "Forget Password   ",
+                        widget: ForgetScreen.id,
+                        color: kBoxColor),
+                  ),
+                  MyButtonText1(
+                      title: 'LOG IN', color: kBoxColor, widget: HomeScreen.id),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Are you not accunted? ",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white,
+                          fontSize: 14,
+                        ),
+                      ),
+                      MyGestureDetector(
+                          title: " SIGNUP",
+                          widget: RegisterScreen.id,
+                          color: kMainColor),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30,
+                  )
+                ],
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height / 6,
-              )
-            ],
+            ),
           ),
         ],
       ),
