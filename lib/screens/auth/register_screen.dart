@@ -33,10 +33,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
                 Container(
-                  alignment: Alignment.bottomRight,
+                  alignment: Alignment.bottomCenter,
                   child: SingleChildScrollView(
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Container(
@@ -47,21 +47,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             fit: BoxFit.fitWidth,
                           ),
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         MyTextFieldWidget(title: "Name", MyOnChange: (val ){}),
                         MyTextFieldWidget(title: "Email", MyOnChange: (val ){}),
                         MyTextFieldWidget(title: "PassWord", MyOnChange: (val ){}),
 
                         SizedBox(height: 15,),
-MyButtonText1(title:    "sign up", color: kBoxColor, widget: HomeScreen.id),
+MyButtonText1(title:"sign up", color: kBoxColor, widget: HomeScreen.id),
 
-                        SizedBox(
+                        const  SizedBox(
                           height: 80,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
+                          children: const[
                             Text(
                               "Already have account? ",
                               style: TextStyle(
@@ -74,7 +74,7 @@ MyButtonText1(title:    "sign up", color: kBoxColor, widget: HomeScreen.id),
 
                           ],
                         ),
-                        SizedBox(
+                     const   SizedBox(
                           height: 60,
                         ),
                       ],
