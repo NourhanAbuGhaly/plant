@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:plant/screens/auth/forget_password_screen.dart';
+import 'package:plant/screens/auth/login_screen.dart';
+import 'package:plant/screens/auth/register_screen.dart';
 import 'package:plant/screens/cood_screen.dart';
-import 'package:plant/screens/forget_password_screen.dart';
+
 import 'package:plant/screens/home_screen.dart';
-import 'package:plant/screens/login_screen.dart';
+
 import 'package:plant/screens/on_boarding_screen.dart';
-import 'package:plant/screens/register_screen.dart';
+
 import 'package:plant/screens/splash_screen.dart';
 import 'package:plant/screens/welcome_screen.dart';
 
@@ -32,7 +35,7 @@ class MyApp extends StatelessWidget {
 
         },
       home: Scaffold(
-        body:HomeScreen(),
+        body:CoodScreen(),
     ));
   }
 }

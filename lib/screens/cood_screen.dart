@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:plant/screens/home_screen.dart';
-import 'package:plant/screens/welcome_screen.dart';
+
 
 class CoodScreen extends StatefulWidget {
-  const CoodScreen({Key? key}) : super(key: key);
+
   static const String id="CoodScreen ";
 
   @override

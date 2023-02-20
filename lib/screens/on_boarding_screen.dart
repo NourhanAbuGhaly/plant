@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:plant/screens/welcome_screen.dart';
+import 'package:plant/constants/constant.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
@@ -23,7 +24,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   titleWidget: Text(
                     "Discover plants",
                     style: TextStyle(
-                        color: Color(0xff3A7F0D),
+                        color: kMainColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 18),
                   ),
@@ -36,7 +37,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 14,
-                            color: Color(0xffA7A7A7),
+                            color: kGreyColor,
                             fontWeight: FontWeight.w500),
                       ),
                     ],
@@ -56,7 +57,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   titleWidget: Text(
                     "Tips & tricks",
                     style: TextStyle(
-                        color: Color(0xff3A7F0D),
+                        color: kMainColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 18),
                   ),
@@ -71,7 +72,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 14,
-                              color: Color(0xffA7A7A7),
+                              color: kGreyColor,
                               fontWeight: FontWeight.w500),
                         ),
                       )
@@ -92,7 +93,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   titleWidget: Text(
                     "Set Reminder",
                     style: TextStyle(
-                        color: Color(0xff3A7F0D),
+                        color: kMainColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 18),
                   ),
@@ -107,7 +108,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 14,
-                              color: Color(0xffA7A7A7),
+                              color: kGreyColor,
                               fontWeight: FontWeight.w500),
                         ),
                       )
@@ -130,10 +131,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               //  showBackButton: true,
               skip: const Text("Skip",
                   style: TextStyle(
-                      fontWeight: FontWeight.w700, color: Color(0xff3A7F0D))),
+                      fontWeight: FontWeight.w700, color:kMainColor)),
               next: const Icon(
                 Icons.arrow_forward,
-                color: Colors.black,
+                color: KBlackColor,
               ),
               //   back :const Icon(
               //   Icons.arrow_back,
@@ -141,7 +142,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               // ),
               done: const Text("Done",
                   style: TextStyle(
-                      fontWeight: FontWeight.w700, color: Color(0xff3A7F0D))),
+                      fontWeight: FontWeight.w700, color:kMainColor)),
               onDone: () => Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
@@ -159,7 +160,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 size: const Size.square(10.0),
                 activeSize: const Size(20.0, 10.0),
                 //    activeColor: Constants.KPrimary,
-                color: Colors.grey,
+                color:kGreyColor,
                 spacing: const EdgeInsets.symmetric(horizontal: 3.0),
                 activeShape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25.0)),
