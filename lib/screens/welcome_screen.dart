@@ -36,9 +36,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              ButtonText1(title:'LOG IN', color: Colors.white, widget: LoginScreen.id),
+              MyButtonText1(title:'LOG IN', color: Colors.white, widget: LoginScreen.id),
 
-              ButtonText(title: "SIGN IN", color:kMainColor, widget:  RegisterScreen.id),
+              MyButtonText(title: "SIGN IN", color:kMainColor, widget:  RegisterScreen.id),
               SizedBox(
                 height: MediaQuery.of(context).size.height / 6,
               )

@@ -5,6 +5,7 @@ const Color kTransparentGreen = Color(0xffE3F9E1);
 const Color kBoxColor = Color(0xffEEEEEE);
 const Color kGreyColor = Color(0xffA7A7A7);
 const Color KBlackColor=Colors.black;
+const Color KTextFeild=Color(0xff9E9E9E);
 
 const kAppBarTextStyle = TextStyle(fontSize: 22.0, color: kMainColor);
 const kResultTextStyle =

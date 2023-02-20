@@ -34,6 +34,14 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              Container(
+                alignment: Alignment.center,
+                width: double.infinity,
+                child: Image.asset(
+                  "assets/images/Plant care.png",
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
                 child: Material(
@@ -99,16 +107,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: MediaQuery.of(context).size.height / 6,
               )
             ],
-          ),
-          Positioned(
-            child: Container(
-              alignment: Alignment.center,
-              width: double.infinity,
-              child: Image.asset(
-                "assets/images/Plant care.png",
-                fit: BoxFit.fitWidth,
-              ),
-            ),
           ),
         ],
       ),
