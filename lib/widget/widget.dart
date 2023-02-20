@@ -22,7 +22,7 @@ class MyButtonText extends StatelessWidget {
         borderRadius: BorderRadius.circular(5.0),
         child: MaterialButton(
           onPressed: () {
-            Navigator.pushNamed(context, widget);
+            Navigator.of(context).pushReplacementNamed( widget);
 
             //Go to login screen.
           },
@@ -62,7 +62,7 @@ class MyButtonText1 extends StatelessWidget {
         borderRadius: BorderRadius.circular(5.0),
         child: MaterialButton(
           onPressed: () {
-            Navigator.pushNamed(context, widget);
+            Navigator.of(context).pushReplacementNamed( widget);
 
             //Go to login screen.
           },

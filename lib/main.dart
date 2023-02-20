@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primaryColor: kMainColor),
       debugShowCheckedModeBanner: false,
         routes: {
+          WelcomeScreen.id:(context)=> WelcomeScreen(),
           LoginScreen.id: (context) => LoginScreen(),
           SplashScreen.id:(context)=>SplashScreen(),
           RegisterScreen.id:(context)=>RegisterScreen(),

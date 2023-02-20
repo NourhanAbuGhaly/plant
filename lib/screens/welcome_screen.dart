@@ -6,6 +6,7 @@ import 'package:plant/widget/widget.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
+  static const String id="WelcomeScreen";
 
   @override
   State<WelcomeScreen> createState() => _WelcomeScreenState();
