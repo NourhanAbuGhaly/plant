@@ -47,7 +47,7 @@ class _ForgetScreenState extends State<ForgetScreen> {
                       fit: BoxFit.fitWidth,
                     ),
                   ),
-                  MyTextFieldWidget(title: "Email", MyOnChange: (val) {}),
+                  MyTextFieldWidget(title: "Email", MyOnChange: (val) {}, icon: null ),
                   MyButtonText1(
                       title: 'Send', color: kBoxColor, widget: CoodScreen.id),
                 ],

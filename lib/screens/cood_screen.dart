@@ -46,7 +46,7 @@ class _CoodScreenState extends State<CoodScreen> {
                       fit: BoxFit.fitWidth,
                     ),
                   ),
-                  MyTextFieldWidget(title: "Cood", MyOnChange: (val) {}),
+                  MyTextFieldWidget(title: "Cood", MyOnChange: (val) {}, icon: null,),
                   MyButtonText1(
                       title: 'Send', color: kBoxColor, widget: MainScreen.id),
                 ],

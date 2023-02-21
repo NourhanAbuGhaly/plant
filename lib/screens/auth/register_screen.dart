@@ -48,9 +48,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           ),
                         ),
                         const SizedBox(height: 10,),
-                        MyTextFieldWidget(title: "Name", MyOnChange: (val ){}),
-                        MyTextFieldWidget(title: "Email", MyOnChange: (val ){}),
-                        MyTextFieldWidget(title: "PassWord", MyOnChange: (val ){}),
+                        MyTextFieldWidget(title: "Name", MyOnChange: (val ){}, icon: null),
+                        MyTextFieldWidget(title: "Email", MyOnChange: (val ){}, icon: null),
+                        MyTextFieldWidget(title: "PassWord", MyOnChange: (val ){}, icon: null),
 
                         SizedBox(height: 15,),
 MyButtonText1(title:"sign up", color: kBoxColor, widget: MainScreen.id),

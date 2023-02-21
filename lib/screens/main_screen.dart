@@ -4,6 +4,7 @@ import 'package:plant/screens/explore_screen.dart';
 import 'package:plant/screens/home_screen.dart';
 import 'package:plant/screens/my_plant_screen.dart';
 import 'package:plant/screens/reminder_screen.dart';
+import 'package:plant/widget/widget.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -189,8 +190,7 @@ class _StartedScreenState extends State<StartedScreen> {
                                   color: kMainColor,
                                   fontWeight: FontWeight.w500,
                                   fontSize: 16),
-                            ),
-                            TextField(),
+                            ),MyTextFieldWidget(MyOnChange: (val){},title: "Search plant",icon: Icon(Icons.search),border: 25.0,),
                             SizedBox(
                               height: 20,
                             ),

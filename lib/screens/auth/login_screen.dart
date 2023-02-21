@@ -50,8 +50,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       fit: BoxFit.fitWidth,
                     ),
                   ),
-                  MyTextFieldWidget(title: "Email", MyOnChange: (val) {}),
-                  MyTextFieldWidget(title: "Password", MyOnChange: (val) {}),
+                  MyTextFieldWidget(title: "Email", MyOnChange: (val) {}, icon: null),
+                  MyTextFieldWidget(title: "Password", MyOnChange: (val) {}, icon: null),
                   Container(
                     padding: EdgeInsets.only(right: 12.0),
                     alignment: Alignment.bottomRight,
