@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
         MainScreen.id: (context) => MainScreen(),
       },
       home:Scaffold(
-        body:MainScreen(),
+        body:SplashScreen(),
       ),
     );
   }

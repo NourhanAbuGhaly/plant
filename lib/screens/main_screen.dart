@@ -157,15 +157,17 @@ class _StartedScreenState extends State<StartedScreen> {
                       child: Stack(
                         children: [
                           Container(
+                            width: double.infinity,
                             child: Image.asset(
                               'assets/images/designecologist.png',
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fitWidth,
                             ),
                           ),
                           Container(
+                            width: double.infinity,
                             child: Image.asset(
                               'assets/images/finkelstein.png',
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fitWidth,
                             ),
                           ),
                         ],
@@ -211,7 +213,7 @@ class _StartedScreenState extends State<StartedScreen> {
       ),
       Container(
         decoration: BoxDecoration(
-          color: Color(0xffD0DFCF),
+          color: Kmainscreen,
           borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(200),
               bottomRight: Radius.circular(200)),
@@ -220,13 +222,16 @@ class _StartedScreenState extends State<StartedScreen> {
           children: [
             SizedBox(
               height:
-              MediaQuery.of(context).size.height / 10,
+              MediaQuery.of(context).size.height / 5,
             ),
             Center(
-              child: Icon(
-                Icons.camera_alt_rounded,
-                color: kMainColor,
-                size: 32,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom:12.0),
+                child: Icon(
+                  Icons.camera_alt_rounded,
+                  color: kMainColor,
+                  size: 40,
+                ),
               ),
             )
           ],
