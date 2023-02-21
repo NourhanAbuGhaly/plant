@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:plant/constants/constant.dart';
 import 'package:plant/screens/auth/forget_password_screen.dart';
 import 'package:plant/screens/auth/login_screen.dart';
@@ -35,6 +36,9 @@ class _MyAppState extends State<MyApp> {
         MainScreen.id: (context) => MainScreen(),
       },
       home:Scaffold(
+        // appBar: AppBar( systemOverlayStyle: SystemUiOverlayStyle(
+        //
+        // ),),
         body:SplashScreen(),
       ),
     );

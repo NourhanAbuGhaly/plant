@@ -110,45 +110,10 @@ class _StartedScreenState extends State<StartedScreen> {
           color: Kmainscreen,
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: SizedBox(),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "TODAY TASKS",
-                          style: TextStyle(
-                              color: kMainColor,
-                              fontWeight: FontWeight.w100,
-                              fontSize: 10),
-                        ),
-                        Text(
-                          "Home",
-                          style: TextStyle(
-                              color: kMainColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 28),
-                        )
-                      ],
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.settings_input_svideo,
-                        color: kMainColor,
-                      ),
-                    ),
-                  ],
-                ),
+              MyTitleWidget(
+                title: "Home",
+                subtitle: "TODAY TASKS",
+                onTap: () {},
               ),
               Container(
                 child: Column(
@@ -190,9 +155,14 @@ class _StartedScreenState extends State<StartedScreen> {
                                   color: kMainColor,
                                   fontWeight: FontWeight.w500,
                                   fontSize: 16),
-                            ),MyTextFieldWidget(MyOnChange: (val){},title: "Search plant",icon: Icon(Icons.search),border: 25.0,),
+                            ),
+                            MyTextFieldWidget(
+                                MyOnChange: (val) {},
+                                title: "Search plant",
+                                icon: Icon(Icons.search),
+                                border: 25.0),
                             SizedBox(
-                              height: 20,
+                              height: 10,
                             ),
                             Text(
                               "Get plant descriptions and care tips",
@@ -201,7 +171,6 @@ class _StartedScreenState extends State<StartedScreen> {
                                   fontWeight: FontWeight.w200,
                                   fontSize: 16),
                             ),
-
                           ],
                         ),
                       ),
@@ -222,19 +191,21 @@ class _StartedScreenState extends State<StartedScreen> {
           child: Column(
             children: [
               SizedBox(
-                height:
-                MediaQuery.of(context).size.height / 7,
+                height: MediaQuery.of(context).size.height / 8,
               ),
               Center(
                 child: Padding(
-                  padding: const EdgeInsets.only(bottom:10.0),
-                  child: CircleAvatar(
-                    maxRadius: 40.0,
-                    backgroundColor:kMainColor ,
-                    child: Icon(
-                      Icons.camera_alt_rounded,
-                      color: KTextFeild,
-                      size: 40,
+                  padding: const EdgeInsets.only(bottom: 10.0),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: CircleAvatar(
+                      maxRadius: 40.0,
+                      backgroundColor: kMainColor,
+                      child: Icon(
+                        Icons.camera_alt_rounded,
+                        color: KTextFeild,
+                        size: 40,
+                      ),
                     ),
                   ),
                 ),

@@ -139,3 +139,53 @@ class MyGestureDetector extends StatelessWidget {
     );
   }
 }
+
+class MyTitleWidget extends StatelessWidget {
+  const MyTitleWidget({Key? key, required this.title, required this.subtitle, required this.onTap}) : super(key: key);
+final String title;
+final String subtitle;
+final Function() onTap;
+  @override
+  Widget build(BuildContext context) {
+    return  Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: SizedBox(),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                subtitle,
+                style: TextStyle(
+                    color: kMainColor,
+                    fontWeight: FontWeight.w100,
+                    fontSize: 10),
+              ),
+              Text(
+                title,
+                style: TextStyle(
+                    color: kMainColor,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28),
+              )
+            ],
+          ),
+          IconButton(
+            onPressed:onTap,
+            icon: Icon(
+              Icons.settings_input_svideo,
+              color: kMainColor,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
