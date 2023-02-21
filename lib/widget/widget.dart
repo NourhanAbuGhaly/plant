@@ -119,7 +119,7 @@ final Color color;
   @override
   Widget build(BuildContext context) {
     return  GestureDetector(
-      onTap: (){Navigator.pushNamed(context, widget);},
+      onTap: (){Navigator.of(context).pushReplacementNamed(widget);},
       child: Text(
         title,
         style: TextStyle(

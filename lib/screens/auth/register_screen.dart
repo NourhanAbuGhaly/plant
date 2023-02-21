@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant/constants/constant.dart';
-import 'package:plant/screens/home_screen.dart';
+import 'package:plant/screens/main_screen.dart';
 import 'package:plant/screens/auth/login_screen.dart';
 import 'package:plant/widget/widget.dart';
 class RegisterScreen extends StatefulWidget {
@@ -53,7 +53,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         MyTextFieldWidget(title: "PassWord", MyOnChange: (val ){}),
 
                         SizedBox(height: 15,),
-MyButtonText1(title:"sign up", color: kBoxColor, widget: HomeScreen.id),
+MyButtonText1(title:"sign up", color: kBoxColor, widget: MainScreen.id),
 
                         const  SizedBox(
                           height: 80,
