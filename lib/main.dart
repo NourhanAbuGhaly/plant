@@ -39,7 +39,7 @@ class _MyAppState extends State<MyApp> {
         RemainderScreen.id: (context) => RemainderScreen(),
       },
       home: Scaffold(
-        body: RemainderScreen(),
+        body: MainScreen(),
       ),
     );
   }

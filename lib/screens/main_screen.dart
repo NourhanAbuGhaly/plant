@@ -4,6 +4,7 @@ import 'package:plant/screens/explore_screen.dart';
 import 'package:plant/screens/home/home_screen.dart';
 import 'package:plant/screens/my_plant_screen.dart';
 import 'package:plant/screens/reminder_screen.dart';
+import 'package:plant/widget/widget.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -106,7 +107,7 @@ class _StartedScreenState extends State<StartedScreen> {
     return SingleChildScrollView(
       child: Column(children: [
         Container(
-          color: Kmainscreen,
+          color: kGreyColor,
           child: Column(
             children: [
               Padding(
@@ -190,7 +191,12 @@ class _StartedScreenState extends State<StartedScreen> {
                                   fontWeight: FontWeight.w500,
                                   fontSize: 16),
                             ),
-                            TextField(),
+                            MyTextFieldWidget(
+                              title: "Search plants",
+                              MyOnChange: (val) {},
+                              icon: Icon(Icons.search),
+                              border: 50.0,
+                            ),
                             SizedBox(
                               height: 20,
                             ),
@@ -213,7 +219,7 @@ class _StartedScreenState extends State<StartedScreen> {
         ),
         Container(
           decoration: BoxDecoration(
-            color: Kmainscreen,
+            color: kGreyColor,
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(200),
                 bottomRight: Radius.circular(200)),
