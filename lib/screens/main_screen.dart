@@ -110,46 +110,8 @@ class _StartedScreenState extends State<StartedScreen> {
           color: kGreyColor,
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: SizedBox(),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "TODAY TASKS",
-                          style: TextStyle(
-                              color: kMainColor,
-                              fontWeight: FontWeight.w100,
-                              fontSize: 10),
-                        ),
-                        Text(
-                          "Home",
-                          style: TextStyle(
-                              color: kMainColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 28),
-                        )
-                      ],
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.settings_input_svideo,
-                        color: kMainColor,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              MyTitleWidget(title: "Home", subtitle: "TODAY TASKS", onTap: (){}),
+
               Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
