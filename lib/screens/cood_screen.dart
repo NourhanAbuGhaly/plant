@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:plant/constants/constant.dart';
-import 'package:plant/screens/main_screen.dart';
 import 'package:plant/widget/widget.dart';
+
+import 'home/home_screen.dart';
 
 class CoodScreen extends StatefulWidget {
   static const String id = "CoodScreen ";
@@ -52,7 +53,7 @@ class _CoodScreenState extends State<CoodScreen> {
                     icon: null,
                   ),
                   MyButtonText1(
-                      title: 'Send', color: kBoxColor, widget: MainScreen.id),
+                      title: 'Send', color: kBoxColor, widget: HomeScreen.id),
                 ],
               ),
             ),

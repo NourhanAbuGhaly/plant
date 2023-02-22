@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:plant/constants/constant.dart';
 import 'package:plant/screens/auth/forget_password_screen.dart';
 import 'package:plant/screens/auth/register_screen.dart';
-import 'package:plant/screens/main_screen.dart';
 import 'package:plant/widget/widget.dart';
+
+import '../home/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = "LoginScreen";
@@ -51,9 +52,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   MyTextFieldWidget(
-                      title: "Email", MyOnChange: (val) {}, icon: null),
+                    title: "Email",
+                    MyOnChange: (val) {},
+                    icon: null,
+                  ),
                   MyTextFieldWidget(
-                      title: "Password", MyOnChange: (val) {}, icon: null),
+                    title: "Password",
+                    MyOnChange: (val) {},
+                    icon: null,
+                  ),
                   Container(
                     padding: EdgeInsets.only(right: 12.0),
                     alignment: Alignment.bottomRight,
@@ -63,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: kBoxColor),
                   ),
                   MyButtonText1(
-                      title: 'LOG IN', color: kBoxColor, widget: MainScreen.id),
+                      title: 'LOG IN', color: kBoxColor, widget: HomeScreen.id),
                   SizedBox(
                     height: 50,
                   ),
