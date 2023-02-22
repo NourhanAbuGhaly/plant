@@ -4,15 +4,18 @@ import 'package:plant/widget/button_widget.dart';
 
 import '../widget/detailes.dart';
 import '../widget/plant_data_box.dart';
+import '../widget/plants_details.dart';
 
-class SearchResult extends StatefulWidget {
-  const SearchResult({Key? key}) : super(key: key);
+class SearchResultScreen extends StatefulWidget {
+  static const String id = "SearchResult";
+
+  const SearchResultScreen({Key? key}) : super(key: key);
 
   @override
-  State<SearchResult> createState() => _SearchResultState();
+  State<SearchResultScreen> createState() => _SearchResultState();
 }
 
-class _SearchResultState extends State<SearchResult> {
+class _SearchResultState extends State<SearchResultScreen> {
   String buttonText = 'add to my plant';
   @override
   Widget build(BuildContext context) {
@@ -55,8 +58,8 @@ class _SearchResultState extends State<SearchResult> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            width: double.infinity,
-                            height: 200,
+                            width: MediaQuery.of(context).size.width,
+                            height: MediaQuery.of(context).size.height / 4,
                             child: Image.asset(
                               'assets/images/pexels.png',
                               fit: BoxFit.fill,
@@ -83,7 +86,7 @@ class _SearchResultState extends State<SearchResult> {
                           'assets/images/Path 105.png',
                           fit: BoxFit.fill,
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 15,
                           top: 5,
                           child: Text(
@@ -107,7 +110,7 @@ class _SearchResultState extends State<SearchResult> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(15.0),
               child: ButtonWidget(
                   text: buttonText.toUpperCase(),
                   onPressed: () {
@@ -119,28 +122,9 @@ class _SearchResultState extends State<SearchResult> {
                     });
                   }),
             ),
-            SingleChildScrollView(
+            const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  PlantsDataBox(
-                    image: 'assets/images/gardening-tools.png',
-                    title: 'Care',
-                    text: 'easy',
-                  ),
-                  PlantsDataBox(
-                    image: 'assets/images/Group 32.png',
-                    title: 'Water',
-                    text: 'Once a week',
-                  ),
-                  PlantsDataBox(
-                    image: 'assets/images/photosynthesis.png',
-                    title: 'Sun',
-                    text: 'Full',
-                  ),
-                ],
-              ),
+              child: PlantDetails(),
             ),
             Details(
               icon: Icons.info_outline,

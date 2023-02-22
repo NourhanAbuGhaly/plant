@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant/constants/constant.dart';
-import 'package:plant/screens/home_screen.dart';
+import 'package:plant/screens/main_screen.dart';
 import 'package:plant/widget/widget.dart';
 
 class CoodScreen extends StatefulWidget {
@@ -46,9 +46,13 @@ class _CoodScreenState extends State<CoodScreen> {
                       fit: BoxFit.fitWidth,
                     ),
                   ),
-                  MyTextFieldWidget(title: "Cood", MyOnChange: (val) {}),
+                  MyTextFieldWidget(
+                    title: "Cood",
+                    MyOnChange: (val) {},
+                    icon: null,
+                  ),
                   MyButtonText1(
-                      title: 'Send', color: kBoxColor, widget: HomeScreen.id),
+                      title: 'Send', color: kBoxColor, widget: MainScreen.id),
                 ],
               ),
             ),

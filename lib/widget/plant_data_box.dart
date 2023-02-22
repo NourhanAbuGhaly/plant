@@ -19,7 +19,7 @@ class PlantsDataBox extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(10.0),
       height: 140,
-      width: 117,
+      width: 120,
       decoration: const BoxDecoration(
           color: kBoxColor,
           borderRadius: BorderRadius.all(Radius.circular(10))),
@@ -37,7 +37,7 @@ class PlantsDataBox extends StatelessWidget {
             style: kResultTextStyle,
           ),
           Container(
-            width: 90,
+            width: 110,
             height: 35,
             padding: const EdgeInsets.all(10),
             decoration: const BoxDecoration(
