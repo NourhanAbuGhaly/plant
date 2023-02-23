@@ -24,89 +24,92 @@ class _MyPlantScreenState extends State<MyPlantScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        MyTitleWidget(
-            title: "My Plants", subtitle: "PLANT COLLECTION", onTap: () {}),
-        Expanded(
-          child: Container(
-            child: ListView.builder(
-                itemCount: ListPlants.length,
-                itemBuilder: (context, index) {
-                  return Material(
-                    elevation: 15,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        color: Colors.white,
-                        border: Border.all(width: .5, color: kGreyColor),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black38,
-                            blurRadius: 2.0,
-                            spreadRadius: 0.0,
-                            offset: Offset(2.0, 2.0), // shadow direction: bottom right
-                          )
-                        ],
-                      ),
-                      padding: EdgeInsets.all(20.0),
-                      margin: EdgeInsets.all(12.0),
-                      child: Column(children: [
-                        Container(
-                            child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                                width: 100,
-                                height: 100,
-                                color: Colors.red,
-                                child:
-                                    Text(ListPlants[index].image.toString())),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  ListPlants[index].title.toString(),
-                                  style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black),
-                                ),
-                                SizedBox(
-                                  height: 15.0,
-                                ),
-                                Text(
-                                  ListPlants[index].descirption.toString(),
-                                  maxLines: 1,
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.grey),
-                                ),
-                              ],
+    return Scaffold(
+      body: Column(
+        children: [
+          MyTitleWidget(
+              title: "My Plants", subtitle: "PLANT COLLECTION", onTap: () {}),
+          Expanded(
+            child: Container(
+              child: ListView.builder(
+                  itemCount: ListPlants.length,
+                  itemBuilder: (context, index) {
+                    return Material(
+                      elevation: 15,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.0),
+                          color: Colors.white,
+                          border: Border.all(width: .5, color: kGreyColor),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black38,
+                              blurRadius: 2.0,
+                              spreadRadius: 0.0,
+                              offset: Offset(
+                                  2.0, 2.0), // shadow direction: bottom right
                             )
                           ],
-                        )),
-                      ]),
-                    ),
-                  );
-                }),
+                        ),
+                        padding: EdgeInsets.all(20.0),
+                        margin: EdgeInsets.all(12.0),
+                        child: Column(children: [
+                          Container(
+                              child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                  width: 100,
+                                  height: 100,
+                                  color: kMainColor,
+                                  child:
+                                      Text(ListPlants[index].image.toString())),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    ListPlants[index].title.toString(),
+                                    style: TextStyle(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
+                                  SizedBox(
+                                    height: 15.0,
+                                  ),
+                                  Text(
+                                    ListPlants[index].descirption.toString(),
+                                    maxLines: 1,
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.grey),
+                                  ),
+                                ],
+                              )
+                            ],
+                          )),
+                        ]),
+                      ),
+                    );
+                  }),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        backgroundColor: kMainColor,
+        onPressed: () {},
+      ),
     );
   }
 }
-
-// MyTitleWidget(
-// title: "My Plant",
-// subtitle: "PLANT COLLECTION",
-// onTap: () {}),
