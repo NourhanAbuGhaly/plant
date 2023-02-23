@@ -26,12 +26,12 @@ class _MainScreenState extends State<MainScreen> {
         body: !flag
             ? StartedScreen()
             : index == 0
-                ? HomeScreen()
-                : index == 1
-                    ? RemainderScreen()
-                    : index == 2
-                        ? ExploreScreen()
-                        : MyPlantScreen(),
+            ? HomeScreen()
+            : index == 1
+            ? RemainderScreen()
+            : index == 2
+            ? ExploreScreen()
+            : MyPlantScreen(),
         bottomNavigationBar: BottomNavigationBar(
           onTap: (val) {
             setState(() {
@@ -107,7 +107,7 @@ class _StartedScreenState extends State<StartedScreen> {
     return SingleChildScrollView(
       child: Column(children: [
         Container(
-          color: kGreyColor,
+          color:KColor1,
           child: Column(
             children: [
               MyTitleWidget(title: "Home", subtitle: "TODAY TASKS", onTap: (){}),
@@ -181,7 +181,7 @@ class _StartedScreenState extends State<StartedScreen> {
         ),
         Container(
           decoration: BoxDecoration(
-            color: kGreyColor,
+            color: KColor1,
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(200),
                 bottomRight: Radius.circular(200)),
