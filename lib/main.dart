@@ -4,6 +4,7 @@ import 'package:plant/screens/auth/forget_password_screen.dart';
 import 'package:plant/screens/auth/login_screen.dart';
 import 'package:plant/screens/auth/register_screen.dart';
 import 'package:plant/screens/cood_screen.dart';
+import 'package:plant/screens/home/home_screen.dart';
 import 'package:plant/screens/main_screen.dart';
 import 'package:plant/screens/search_result.dart';
 import 'package:plant/screens/reminder_screen.dart';
@@ -28,6 +29,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(primaryColor: kMainColor),
       debugShowCheckedModeBanner: false,
       routes: {
+        HomeScreen.id:(context)=> HomeScreen(),
         WelcomeScreen.id: (context) => WelcomeScreen(),
         LoginScreen.id: (context) => LoginScreen(),
         SplashScreen.id: (context) => SplashScreen(),
@@ -38,9 +40,8 @@ class _MyAppState extends State<MyApp> {
         SearchResultScreen.id: (context) => SearchResultScreen(),
         RemainderScreen.id: (context) => RemainderScreen(),
       },
-      home: Scaffold(
-        body: MainScreen(),
-      ),
+      home: SplashScreen(),
+
     );
   }
 }

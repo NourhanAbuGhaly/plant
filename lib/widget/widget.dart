@@ -105,9 +105,9 @@ class MyTextFieldWidget extends StatelessWidget {
             fillColor: Color.fromARGB(08, 158, 158, 158),
             hintText: title,
             hintStyle: const TextStyle(
-                color: KTextFeild, fontSize: 18, fontWeight: FontWeight.w400),
+                color: kGreyColor, fontSize: 18, fontWeight: FontWeight.w400),
             border: OutlineInputBorder(
-              borderSide: BorderSide(width: 3),
+              borderSide: BorderSide(width: 3,color: kBoxColor),
               borderRadius: BorderRadius.circular(border.toDouble()),
             )),
       ),
@@ -153,7 +153,8 @@ class MyTitleWidget extends StatelessWidget {
   final Function() onTap;
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+color:KColor1,
       padding: const EdgeInsets.all(20.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -51,11 +51,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     height: 10,
                   ),
                   MyTextFieldWidget(
-                      title: "Name", MyOnChange: (val) {}, icon: null),
+                      title: "Name", MyOnChange: (val) {}, icon: null ,border: 15.0),
                   MyTextFieldWidget(
-                      title: "Email", MyOnChange: (val) {}, icon: null),
+                      title: "Email", MyOnChange: (val) {}, icon: null ,border: 15.0),
                   MyTextFieldWidget(
-                      title: "PassWord", MyOnChange: (val) {}, icon: null),
+                      title: "PassWord", MyOnChange: (val) {}, icon: null ,border: 15.0,),
                   SizedBox(
                     height: 15,
                   ),

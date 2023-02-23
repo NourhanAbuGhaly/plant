@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:plant/constants/constant.dart';
 import 'package:plant/screens/auth/forget_password_screen.dart';
 import 'package:plant/screens/auth/register_screen.dart';
+import 'package:plant/screens/main_screen.dart';
 import 'package:plant/widget/widget.dart';
 
 import '../home/home_screen.dart';
@@ -55,11 +56,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     title: "Email",
                     MyOnChange: (val) {},
                     icon: null,
+                    border: 15.0,
                   ),
                   MyTextFieldWidget(
                     title: "Password",
                     MyOnChange: (val) {},
                     icon: null,
+                    border: 15.0,
                   ),
                   Container(
                     padding: EdgeInsets.only(right: 12.0),
@@ -70,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: kBoxColor),
                   ),
                   MyButtonText1(
-                      title: 'LOG IN', color: kBoxColor, widget: HomeScreen.id),
+                      title: 'LOG IN', color: kBoxColor, widget: MainScreen.id),
                   SizedBox(
                     height: 50,
                   ),
