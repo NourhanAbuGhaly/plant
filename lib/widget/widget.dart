@@ -204,6 +204,8 @@ final List<MyPlants> ListPlants;
   Widget build(BuildContext context) {
     return    Expanded(
       child: Container(
+        width: double.infinity,
+        height: double.infinity/3,
         child: ListView.builder(
             itemCount: ListPlants.length,
             itemBuilder: (context, index) {

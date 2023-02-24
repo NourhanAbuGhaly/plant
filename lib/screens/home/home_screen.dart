@@ -36,19 +36,44 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          MyTitleWidget(title: "Home", subtitle: "TODAY TASKS", onTap: () {}),
-          // Container(
-          //   child: MyContainer(ListPlants: ListPlants),
-          // ),
-          // SizedBox(height: 20.0,child: Container(color: Colors.black38,),),
-          // Container(
-          //   child: MyContainer(ListPlants: ListPlants1),
-          // )
-        ],
-      ),
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          child: Column(
+            children: [
+              MyTitleWidget(
+                  title: "Home", subtitle: "TODAY TASKS", onTap: () {}),
+              Container(
+                alignment: Alignment.topLeft,
+                padding: EdgeInsets.symmetric(vertical: 8.0,horizontal: 8.0),
+                child: Text(
+                  "Today Tasks",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: kMainColor),
+                ),
+              ),
+              MyContainer(ListPlants: ListPlants),
+              SizedBox(
+                height: 20.0,
+              ),
+              Container(
+                alignment: Alignment.topLeft,
+                padding: EdgeInsets.symmetric(vertical: 8.0,horizontal: 8.0),
+                child: Text(
+                  "Daily Tasks",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: kMainColor),
+                ),
+              ),
+              MyContainer(ListPlants: ListPlants1)
+            ],
+          ),
+        )
+      ],
     );
   }
 }

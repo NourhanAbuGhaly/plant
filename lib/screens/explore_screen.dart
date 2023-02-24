@@ -10,8 +10,27 @@ class ExploreScreen extends StatefulWidget {
 class _ExploreScreenState extends State<ExploreScreen> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('ExploreScreen'),
+    return LayoutBuilder(
+      builder: (context, constraint) {
+        return SingleChildScrollView(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(minHeight: constraint.maxHeight),
+            child: IntrinsicHeight(
+              child: Column(
+                children: <Widget>[
+                  Text("Header"),
+                  Expanded(
+                    child: Container(
+                      color: Colors.red,
+                    ),
+                  ),
+                  Text("Footer"),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

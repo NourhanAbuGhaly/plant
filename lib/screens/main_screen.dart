@@ -4,6 +4,7 @@ import 'package:plant/screens/explore_screen.dart';
 import 'package:plant/screens/home/home_screen.dart';
 import 'package:plant/screens/my_plant_screen.dart';
 import 'package:plant/screens/reminder_screen.dart';
+import 'package:plant/screens/reminder_screenscond.dart';
 import 'package:plant/widget/widget.dart';
 
 class MainScreen extends StatefulWidget {
@@ -28,7 +29,7 @@ class _MainScreenState extends State<MainScreen> {
             : index == 0
             ? HomeScreen()
             : index == 1
-            ? RemainderScreen()
+            ? RimenderScreen()
             : index == 2
             ? ExploreScreen()
             : MyPlantScreen(),

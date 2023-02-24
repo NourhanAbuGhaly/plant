@@ -7,7 +7,7 @@ import 'package:plant/screens/cood_screen.dart';
 import 'package:plant/screens/home/home_screen.dart';
 import 'package:plant/screens/main_screen.dart';
 import 'package:plant/screens/search_result.dart';
-import 'package:plant/screens/reminder_screen.dart';
+import 'package:plant/screens/reminder_screenscond.dart';
 import 'package:plant/screens/splash/splash_screen.dart';
 import 'package:plant/screens/splash/welcome_screen.dart';
 
@@ -38,9 +38,9 @@ class _MyAppState extends State<MyApp> {
         ForgetScreen.id: (context) => ForgetScreen(),
         MainScreen.id: (context) => MainScreen(),
         SearchResultScreen.id: (context) => SearchResultScreen(),
-        RemainderScreen.id: (context) => RemainderScreen(),
+        RemainderScreensecond.id: (context) => RemainderScreensecond(),
       },
-      home: SplashScreen(),
+      home: MainScreen(),
 
     );
   }

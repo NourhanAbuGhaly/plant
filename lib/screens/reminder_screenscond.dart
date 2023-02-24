@@ -6,16 +6,16 @@ import '../widget/dialog.dart';
 import '../widget/plants_box.dart';
 import '../widget/plants_details.dart';
 
-class RemainderScreen extends StatefulWidget {
+class RemainderScreensecond extends StatefulWidget {
   static const String id = "RemainderScreen";
 
-  const RemainderScreen({Key? key}) : super(key: key);
+  const RemainderScreensecond({Key? key}) : super(key: key);
 
   @override
-  State<RemainderScreen> createState() => _RemainderScreenState();
+  State<RemainderScreensecond> createState() => _RemainderScreensecondState();
 }
 
-class _RemainderScreenState extends State<RemainderScreen>
+class _RemainderScreensecondState extends State<RemainderScreensecond>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   bool toggle = false;
